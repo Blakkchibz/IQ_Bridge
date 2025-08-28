@@ -20,9 +20,14 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+        binding.forgotPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            intent.flags= Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
         }

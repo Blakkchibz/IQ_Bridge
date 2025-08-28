@@ -13,7 +13,7 @@
         android:layout_width="350dp"
         android:layout_height="280dp"
         android:src="@drawable/main_logo"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +28,7 @@
         android:textStyle="bold"
         android:textColor="@color/gray"
         android:fontFamily="@font/aclonica"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="210dp"
         android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -87,6 +87,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"

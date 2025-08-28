@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.iqbridge"
+    namespace = "com.starforge.iqbridge"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.iqbridge"
+        applicationId = "com.starforge.iqbridge"
         minSdk = 26
         targetSdk = 36
         versionCode = 1

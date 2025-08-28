@@ -8,6 +8,7 @@
     tools:context=".activities.MainActivity"
     android:background="@drawable/general_bg">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -48,7 +49,6 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -82,7 +82,6 @@
                     android:id="@+id/iv_ranking_icon"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/medal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -128,7 +127,6 @@
                     android:id="@+id/iv_points_icon"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/coin"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
