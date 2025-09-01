@@ -15,4 +15,7 @@
     <color name="orange">#FCA019</color>
     <color name="brown">#42F44336</color>
     <color name="green">#008000</color>
+    <color name="gold">#F58F03</color>
+    <color name="silver">#008000</color>
+    <color name="bronze">#008000</color>
 </resources>
