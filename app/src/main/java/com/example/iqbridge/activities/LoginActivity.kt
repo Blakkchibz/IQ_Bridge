@@ -3,7 +3,6 @@ package com.example.iqbridge.activities
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.iqbridge.activities.SignupActivity
 import com.example.iqbridge.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {

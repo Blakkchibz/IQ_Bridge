@@ -3,7 +3,7 @@ package com.example.iqbridge.activities
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.starforge.iqbridge.databinding.ActivityMainBinding
+import com.example.iqbridge.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
