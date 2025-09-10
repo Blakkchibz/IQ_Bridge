@@ -61,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="40dp"
-            app:cardBackgroundColor="@color/orange"
+            app:cardBackgroundColor="@color/yellow"
             app:cardCornerRadius="30dp"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -110,6 +110,7 @@
             android:gravity="center"
             android:textSize="24sp"
             android:textStyle="bold"
+            android:textColor="@color/shadow"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cl_circular_progress_bar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -134,7 +135,8 @@
             android:background="@drawable/gray_button_bg"
             android:textAllCaps="false"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/option2"
@@ -144,7 +146,8 @@
             android:background="@drawable/gray_button_bg"
             android:textAllCaps="false"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/white" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/option3"
@@ -154,7 +157,8 @@
             android:background="@drawable/gray_button_bg"
             android:textAllCaps="false"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/white" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/option4"
@@ -164,7 +168,8 @@
             android:background="@drawable/gray_button_bg"
             android:textAllCaps="false"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -175,9 +180,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="30dp"
-        android:background="@drawable/dark_solid_button_bg"
+        android:background="@drawable/yellow_solid_button_bg"
         android:text="Next"
-        android:textColor="@color/white"
+        android:textColor="@color/shadow"
         android:textAllCaps="false"
         android:textSize="20sp"
         android:textStyle="bold"

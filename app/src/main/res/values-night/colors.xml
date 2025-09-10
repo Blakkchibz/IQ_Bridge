@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_blue">#212338</color>
+    <color name="bright_blue">#2D82C8</color>
+    <color name="yellow">#F4CC45</color>
+    <color name="grey">#808080</color>
+    <color name="scarletred">#FF2400</color>
+    <color name="leader_board_bg">#77E6F4</color>
+    <color name="deep_blue">#4316C0F9</color>
+    <color name="gray">#DCDCDC</color>
+    <color name="gray2">#BEBEBE</color>
+    <color name="shadow">#3C3F41</color>
+    <color name="orange">#FCA019</color>
+    <color name="brown">#42F44336</color>
+    <color name="green">#008000</color>
+    <color name="gold">#F58F03</color>
+    <color name="silver">#008000</color>
+    <color name="bronze">#008000</color>
+</resources>

@@ -3,40 +3,35 @@ package com.example.iqbridge.activities
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.iqbridge.adapters.GridAdapter
 import com.example.iqbridge.databinding.ActivityMainBinding
+import com.example.iqbridge.models.Category
+import com.example.iqbridge.utils.Constants
+import com.example.iqbridge.utils.QuizClass
+import com.example.iqbridge.utils.Utils
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private var binding: ActivityMainBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(binding?.root)
 
-        binding.mainProfileImage.setOnClickListener {
-            val intent = Intent(this, UserProfileActivity::class.java)
-            startActivity(intent)
-        }
+        val quizClass = QuizClass(this)
+        val rvCategoryList = binding?.rvCategoryList
+        rvCategoryList?.layoutManager = GridLayoutManager(this, 2)
 
-        binding.btnCustomQuiz.setOnClickListener {
-            val intent = Intent(this, CustomQuizActivity::class.java)
-            startActivity(intent)
-        }
+        quizClass.getQuestionStatsList(object : QuizClass.QuestionStatCallback{
+            override fun onQuestionStatFetched(map: Map<String, Category>) {
+                val adapter = GridAdapter(Constants.getCategoryItemList(), map)
+                rvCategoryList?.adapter = adapter
 
-        binding.btnRandomQuiz.setOnClickListener {
-            val intent = Intent(this, QuizActivity::class.java)
-            startActivity(intent)
-        }
+            }
+        })
 
-        binding.ivRankingIcon.setOnClickListener {
-            val intent = Intent(this, LeaderBoardActivity::class.java)
-            startActivity(intent)
-        }
 
-        binding.ivPointsIcon.setOnClickListener {
-            val intent = Intent(this, ResultActivity::class.java)
-            startActivity(intent)
-        }
     }
 }

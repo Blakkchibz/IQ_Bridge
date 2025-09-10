@@ -15,7 +15,7 @@
         android:text="Profile"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/shadow"
         app:layout_constraintTop_toTopOf="parent"
         />
 
@@ -49,7 +49,7 @@
         tools:text="Email@gmail.com"
         android:textSize="18sp"
         android:gravity="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/txtUserName"
         />
     <androidx.cardview.widget.CardView
@@ -59,7 +59,7 @@
         app:cardElevation="10dp"
         android:layout_margin="20dp"
         app:cardCornerRadius="20dp"
-        app:cardBackgroundColor="@color/orange"
+        app:cardBackgroundColor="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEmailId">

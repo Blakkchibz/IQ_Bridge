@@ -2,6 +2,13 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.IQBridge" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="android:statusBarColor">@color/yellow</item>
     </style>
+
+<style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+<item name="cornerSize">50%</item>
+</style>
+
 </resources>
