@@ -1,11 +1,11 @@
 package com.example.iqbridge.utils
 
 import android.content.Context
-import android.util.Log
+import android.content.Intent
+import com.example.iqbridge.activities.QuizActivity
 import com.example.iqbridge.models.Category
 import com.example.iqbridge.models.QuestionsStats
 import com.example.iqbridge.models.QuizResponse
-import com.example.iqbridge.models.Result
 import com.example.iqbridge.retrofit.QuestionStatsService
 import com.example.iqbridge.retrofit.QuizService
 import retrofit2.Call
@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class QuizClass(
     private val context: Context
 ) {
-    fun getQuizList(amount:Int, category: Int?, difficulty: String?, type:String?, callback: QuestionListCallback)
+    fun getQuizList(amount:Int, category: Int?, difficulty: String?, type:String?)
     {
 
         if (Constants.isNetworkAvailable(context))
@@ -42,9 +42,12 @@ class QuizClass(
                     pbDialog.cancel()
                     if (response.isSuccessful){
                         val responseData: QuizResponse = response.body()!!
-                        val questionList = responseData.results
-                        callback.onQuestionListFetched(questionList)
-                        Log.e("Debug",questionList.toString())
+                        val questionList = ArrayList(responseData.results)
+                        if (questionList.isNotEmpty()){
+                            val intent = Intent(context, QuizActivity::class.java)
+                            intent.putExtra("questionList", questionList)
+                            context.startActivity(intent)
+                        }
                     }
                     else{
                         Utils.showToast(context, "Response Failed")
@@ -64,10 +67,6 @@ class QuizClass(
             Utils.showToast(context, "Network is not available")
 
         }
-    }
-
-    interface QuestionListCallback{
-        fun onQuestionListFetched(list:List<Result>)
     }
 
     fun getQuestionStatsList(callBack: QuestionStatCallback){

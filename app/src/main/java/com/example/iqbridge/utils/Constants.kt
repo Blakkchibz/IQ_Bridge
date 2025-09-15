@@ -3,10 +3,19 @@ package com.example.iqbridge.utils
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import androidx.core.text.HtmlCompat
 import com.example.iqbridge.R
 import com.example.iqbridge.models.CategoryModel
 
 object Constants {
+
+    val difficultyList = listOf("Any", "Easy","Medium", "Hard")
+    val typeList = listOf("Any","Multiple Choice", "True/false")
+    const val user = "USER"
+    const val allTimeScore = "allTimeScore"
+    const val weeklyScore = "weeklyScore"
+    const val monthlyScore = "monthlyScore"
+    const val lastGameScore = "lastGameScore"
 
     fun isNetworkAvailable(context: Context): Boolean
     {
@@ -101,5 +110,31 @@ object Constants {
             CategoryModel("32",R.drawable.cartoon,"Cartoons & Animations")
         )
         return list
+    }
+
+    fun getRandomOptions(correctAnswer:String, incorrectAnswer:List<String>): Pair<String, List<String>>
+    {
+        val list = mutableListOf<String>()
+        list.add(decodeHtmlString(correctAnswer))
+        for (i in incorrectAnswer){
+            list.add(decodeHtmlString(i))
+        }
+
+        list.shuffle()
+        return Pair(correctAnswer, list)
+    }
+
+    fun decodeHtmlString(htmlEncoded: String): String{
+        return HtmlCompat.fromHtml(htmlEncoded, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
+    }
+
+    fun getCategoryStringArray():List<String>
+    {
+        val list = getCategoryItemList()
+        val result = mutableListOf<String>()
+        result.add("Any")
+        for(i in list)
+            result.add(i.name)
+        return result
     }
 }
