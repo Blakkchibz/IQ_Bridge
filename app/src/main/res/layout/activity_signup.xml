@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/signupEmail"
+        android:id="@+id/tilName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/txtSignup"
@@ -47,9 +47,10 @@
         >
 
         <EditText
+            android:id="@+id/etSinUpName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
+            android:layout_height="50dp"
+            android:hint="Name"
             android:inputType="textEmailAddress"
             android:textSize="20sp"
             android:textColor="@color/gray"
@@ -59,12 +60,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/SignupPassword"
+        android:id="@+id/tilEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tilName"
         app:passwordToggleEnabled="true"
         style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
         app:boxStrokeColor="@color/text_input_stroke"
@@ -73,9 +74,10 @@
         >
 
         <EditText
+            android:id="@+id/etSinUpEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
+            android:layout_height="50dp"
+            android:hint="Email ID"
             android:textColorHint="@color/gray"
             android:textColor="@color/gray"
             android:inputType="textPassword"
@@ -85,12 +87,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirmPassword"
+        android:id="@+id/tilPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SignupPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail"
         app:passwordToggleEnabled="true"
         style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
         app:boxStrokeColor="@color/text_input_stroke"
@@ -99,9 +101,10 @@
         >
 
         <EditText
+            android:id="@+id/etSinUpPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Confirm Password"
+            android:layout_height="50dp"
+            android:hint="Password"
             android:textColorHint="@color/gray"
             android:textColor="@color/gray"
             android:inputType="textPassword"
@@ -111,7 +114,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnSignup"
+        android:id="@+id/btnSignUp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -122,7 +125,7 @@
         android:background="@drawable/yellow_solid_button_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword"
         />
 
     <TextView
@@ -135,10 +138,10 @@
         android:textColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSignup" />
+        app:layout_constraintTop_toBottomOf="@id/btnSignUp" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/btnGoogle"
+        android:id="@+id/btnSignInWithGoogle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="#D3D3D3"
@@ -185,7 +188,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGoogle"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignInWithGoogle"
         android:orientation="horizontal">
 
         <TextView
@@ -199,7 +202,7 @@
             />
 
         <TextView
-            android:id="@+id/loginRedirect"
+            android:id="@+id/tvLoginPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Log In"

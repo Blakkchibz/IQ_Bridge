@@ -11,7 +11,6 @@ import com.example.iqbridge.R
 import com.example.iqbridge.databinding.ActivityQuizBinding
 import com.example.iqbridge.models.QuestionResult
 import com.example.iqbridge.utils.Constants
-import com.example.iqbridge.utils.Utils
 import com.example.quizwiz.models.ResultModel
 
 class QuizActivity : AppCompatActivity() {

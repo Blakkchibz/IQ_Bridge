@@ -1,6 +1,6 @@
 package com.example.iqbridge.activities
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -11,12 +11,11 @@ import android.widget.SpinnerAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.example.iqbridge.databinding.ActivityCustomQuizBinding
 import com.example.iqbridge.utils.Constants
-import com.example.iqbridge.utils.QuizClass
+import com.example.iqbridge.quiz.QuizClass
 
 class CustomQuizActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCustomQuizBinding
-
     private var amount = 10
     private var category: Int? = null
     private var difficulty: String? = null
@@ -34,6 +33,8 @@ class CustomQuizActivity : AppCompatActivity() {
         handleCategorySpinner()
         handleDifficultySpinner()
         handleTypeSpinner()
+        handleSeekBar()
+
         val quizClass = QuizClass(this)
         binding.startCustomQuiz.setOnClickListener {
             quizClass.getQuizList(amount, category, difficulty, type)

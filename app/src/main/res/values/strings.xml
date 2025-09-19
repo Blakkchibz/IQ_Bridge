@@ -9,5 +9,6 @@
     <string name="get_started_text">Welcome to QuizWiz\nChallenge your knowledge and take quiz of your own field of interest</string>
     <string name="forgot_password_msg">Don\'t worry! it happens. Please enter the email address associated with your account.</string>
     <string name="on_submit_msg">You will receive an email containing a link where you can reset your password.</string>
+    <string name="default_web_client_id">92766184280-b77as890umiqbaojaedaeij8vjhhugh8.apps.googleusercontent.com</string>
 
 </resources>

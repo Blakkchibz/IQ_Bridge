@@ -1,6 +1,6 @@
 package com.example.iqbridge.models
 
-data class QuestionsStats(
+data class QuestionStats(
     val overall: Overall,
     val categories: Map<String, Category>
 )

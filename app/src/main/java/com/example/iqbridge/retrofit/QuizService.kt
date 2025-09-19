@@ -1,6 +1,6 @@
 package com.example.iqbridge.retrofit
 
-import com.example.iqbridge.models.QuestionsStats
+import com.example.iqbridge.models.QuestionStats
 import com.example.iqbridge.models.QuizResponse
 import retrofit2.Call
 import retrofit2.http.GET
@@ -18,5 +18,5 @@ interface QuizService {
 
 interface QuestionStatsService{
     @GET("api_count_global.php")
-    fun getData():Call<QuestionsStats>
+    fun getData():Call<QuestionStats>
 }

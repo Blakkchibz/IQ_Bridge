@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "92766184280",
+    "firebase_url": "https://iq-bridge-32586-default-rtdb.firebaseio.com",
+    "project_id": "iq-bridge-32586",
+    "storage_bucket": "iq-bridge-32586.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92766184280:android:1c4ab717e63f39a1cbfb2d",
+        "android_client_info": {
+          "package_name": "com.example.iqbridge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92766184280-5hcvalctb17e71h2hs7vaqpsg6vricib.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.iqbridge",
+            "certificate_hash": "d68bd8f6eb5d5b23b9cf30c668d9ce09fd93bd05"
+          }
+        },
+        {
+          "client_id": "92766184280-b77as890umiqbaojaedaeij8vjhhugh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0CEqdIi_QTMf5-e522cqu7lKoakhHQj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92766184280-b77as890umiqbaojaedaeij8vjhhugh8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

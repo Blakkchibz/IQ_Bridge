@@ -5,11 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.iqbridge.adapters.GridAdapter
 import com.example.iqbridge.databinding.ActivityMainBinding
-import com.example.iqbridge.models.Category
+import com.example.iqbridge.firebase.FireBaseClass
+import com.example.iqbridge.models.UserModel
 import com.example.iqbridge.utils.Constants
-import com.example.iqbridge.utils.QuizClass
+import com.example.iqbridge.quiz.QuizClass
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,24 +20,27 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val quizClass = QuizClass(this)
-        val rvCategoryList = binding.rvCategoryList
-        rvCategoryList.layoutManager = GridLayoutManager(this, 2)
-
-
-
-        quizClass.getQuestionStatsList(object : QuizClass.QuestionStatCallback{
-            override fun onQuestionStatFetched(map: Map<String, Category>) {
-                val adapter = GridAdapter(Constants.getCategoryItemList(), map)
-                rvCategoryList.adapter = adapter
-                adapter.setTouchResponse(object : GridAdapter.TouchResponse{
-                    override fun onClick(id: Int) {
-                        quizClass.getQuizList(10, id, null, null)
-                    }
-                })
-
+        FireBaseClass().getUserInfo(object :FireBaseClass.UserInfoCallback{
+            override fun onUserInfoFetched(userInfo: UserModel?) {
+                binding.tvUserPoints.text = String.format("%.2f",userInfo?.allTimeScore)
+                binding.tvUserName.text = "Hi, " + userInfo?.name
+                FireBaseClass().setProfileImage(userInfo?.image,binding.mainProfileImage)
             }
         })
+
+        FireBaseClass().getUserRank(Constants.allTimeScore,
+            object :FireBaseClass.UserRankCallback{
+                override fun onUserRankFetched(rank: Int?) {
+                    if (rank!=null)
+                        binding.tvUserRanking.text = rank.toString()
+                }
+
+            })
+
+        val rvCategoryList = binding.rvCategoryList
+        rvCategoryList.layoutManager = GridLayoutManager(this,2)
+        val quizClass = QuizClass(this)
+        quizClass.setRecyclerView(rvCategoryList)
 
         binding.btnRandomQuiz.setOnClickListener {
             quizClass.getQuizList(10,null,null,null)
